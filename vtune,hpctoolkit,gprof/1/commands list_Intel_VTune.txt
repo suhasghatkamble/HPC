@@ -1,0 +1,17 @@
+STEPS:
+
+
+
+1. firstly run the bash file i.e. vtune.sh file
+
+2. vtune module is loaded using command : 
+
+            module load vtune/latest
+
+3. then we take folder path of directory to store the files created after running final vtune command
+
+4. then we take Executable file path of a program to run the vtune command
+
+5. Finally we run the final vtune command and giving appropriate path of directory and Executable file
+        
+        vtune --collect=hotspot --result-dir=$directory_path -- $executable_path

@@ -1,0 +1,12 @@
+STEPS 
+
+
+1. firstly run the bash hpctoolkit.sh file
+
+2. give the executable program file absolute path
+
+3. select the appropriate options from the bash i.e. RUNTIME AND IO 
+
+4. select if required the tracing option 
+
+5. finally the hpctoolkit final four command will run 

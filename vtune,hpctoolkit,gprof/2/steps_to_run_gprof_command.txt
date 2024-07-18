@@ -1,0 +1,18 @@
+
+Steps : 
+
+1. firstly run the script file of gprof.sh
+
+2. then take the absolute path of the c or cpp program file
+
+            gcc -pg "$filePath" -std=c99 -o "output"
+
+3. then compile the program file of c 
+
+4. then run the gprof final command 
+
+            gprof $executable_file gmon.out > "analysis.txt"
+
+5. then the output of the gprof report is stored in analysis.txt file
+
+ finally displayed the analysis.txt file

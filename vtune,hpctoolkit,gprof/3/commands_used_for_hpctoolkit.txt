@@ -1,0 +1,16 @@
+commands used to execute the program using HPCToolkit
+
+
+1. source /home/apps/spack/share/spack/setup-env.sh
+
+2. spack load hpctoolkit
+
+3. ulimit -s unlimited 
+
+4. hpcrun $event_string -t $exe_name
+
+5. hpcstruct ./hpctoolkit-$executable_file-measurements/  
+
+6. hpcprof ./hpctoolkit-$executable_file-measurements/
+
+7. hpcviewer ./hpctoolkit-$executable_file-database/
