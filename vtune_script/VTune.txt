@@ -1,0 +1,43 @@
+For running mmult_without_opt.c file using Intel VTune:
+module load vtune/latest
+gcc -o mmult_without_opt mmult_without_opt.c
+vtune --collect=hotspot --result-dir=./report1 -- ./mmult_without_opt
+cd report1
+vtune-gui report1.vtune
+
+For running mmult_with_opt.c file using Intel VTune:
+module load vtune/latest
+gcc -o mmult_with_opt mmult_with_opt.c
+vtune --collect=hotspot --result-dir=./report2 -- ./mmult_with_opt
+cd report2
+vtune-gui report2.vtune
+
+
+Intel VTune using shell script
+v1
+Below is the sample command to run hotspot analysis of an application with intel vtune:
+vtune --collect=hotspot --result-dir=./report1 -- ./mmult_without_opt
+
+Write a shell script to run any executable file with intel vtune. The shell script
+should:
+- load the required modules for running advisor (ask the user the name of the vtune module and load it using the module load command)
+- ask the user for the absolute path to the project directory (it can be any name)
+- ask the user for the absolute path to the executable file
+
+Based on the input given by the user, the script should create and run the vtune command and generate the report
+
+v2
+Ask the user in the end if he/she wants to see top hotspots on the command line
+
+v3
+Check if the executable and project directory path exists or not on the system.
+
+v4
+Also, Open the generated report using vtune-gui command
+
+v4
+Give the user option to compare hotspots results of the file.
+mmult_without_opt.c
+mmult_with_opt.c
+
+In the end, the script should compare hotspot result of both these files i.e. it should show increase/decrease in time of specific hotspot
