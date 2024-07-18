@@ -1,0 +1,5 @@
+g++ -o matrix matrix.cpp
+./matrix
+module load advisor/latest
+ls
+advisor --collect=offload --config=gen11_icl --project-dir=./mmul_report -- ./matrix
